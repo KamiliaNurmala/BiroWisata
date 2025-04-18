@@ -29,8 +29,22 @@ namespace BiroWisataConsole
 
                 switch (Console.ReadLine())
                 {
-                    ...
+                    static void MenuDataMaster()
+                {
+                    Console.Clear();
+                    Console.WriteLine("-- DATA MASTER --");
+                    Console.WriteLine("1. Pelanggan");
+                    Console.WriteLine("2. Driver");
+                    Console.WriteLine("3. Kendaraan");
+                    Console.WriteLine("0. Kembali");
+                    Console.Write("Pilih entitas: ");
+                    var pilihan = Console.ReadLine();
+                    if (pilihan == "1") CrudEntity(Pelanggans, "Pelanggan");
+                    if (pilihan == "2") CrudEntity(Drivers, "Driver");
+                    if (pilihan == "3") CrudEntity(Kendaraans, "Kendaraan");
                 }
+            }
+            }
         }
     }
 
